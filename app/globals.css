@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #f97316; /* orange-500 */
+    --primary-hover: #ea580c; /* orange-600 */
+  }
+
+  /* Extreme Fluid Typography & Universal Overflow Fix */
+  html, body {
+     @apply scroll-smooth m-0 p-0 overflow-x-hidden w-full max-w-full;
+  }
+
+  body {
+    @apply bg-white text-black font-inter antialiased;
+    font-family: var(--font-inter), sans-serif;
+    line-height: normal;
+  }
+
+  /* Headings - 100% PURE BLACK - Poppins */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-black text-black tracking-tighter uppercase leading-[1.1] transition-all;
+    letter-spacing: -0.04em;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  h1 {
+    @apply text-[28px] sm:text-[40px] md:text-5xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-[22px] sm:text-3xl lg:text-5xl font-black;
+  }
+
+  h3 {
+    @apply text-lg sm:text-2xl font-black;
+  }
+
+  /* Body - 100% PURE BLACK - Inter */
+  p, span, div, li, ul, ol, section {
+    @apply font-inter;
+  }
+
+  p {
+    @apply text-[14px] sm:text-base md:text-lg text-black leading-relaxed font-black opacity-100;
+  }
+
+  small {
+    @apply text-[9px] md:text-sm text-black font-inter uppercase tracking-[0.2em] font-black opacity-100;
+  }
+}
+
+@layer components {
+  /* Ultra-Responsive Layout System */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 w-full;
+  }
+
+  .section-spacing {
+    @apply py-8 sm:py-20 lg:py-32;
+  }
+
+  /* Tactical Button System - Fluid & Tactile */
+  .btn-base {
+     @apply font-inter h-14 sm:h-16 px-6 sm:px-8 rounded-xl text-xs sm:text-sm font-black tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-3 active:scale-95 shadow-xl disabled:opacity-50 w-full sm:w-auto mt-2;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-orange-500 text-white hover:bg-orange-600 shadow-orange-500/20 shadow-xl;
+  }
+
+  .btn-black {
+    @apply btn-base bg-black text-white hover:bg-gray-900 shadow-black/10 shadow-xl border-2 border-black;
+  }
+
+  .btn-whatsapp {
+    @apply btn-base bg-green-500 text-white hover:bg-green-600 shadow-green-500/20 shadow-xl;
+  }
+
+  /* Fluid Grid Master */
+  .grid-master {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10;
+  }
+}
+
+/* Animations Logic */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar System */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Performance Visual Safeties */
+.safe-p-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+/* Fix for any hidden overflows during animations */
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}

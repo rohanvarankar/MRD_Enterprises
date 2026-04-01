@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "MRD ENTERPRISES",
+    "tagline": "Janseva Document Service Center",
+    "hubNotice": "Official Service Hub - Thane",
+    "subtitle": "All Document Services at One Place",
+    "description": "Complete solution for Income, Domicile, Caste certificates, RTO services, and all government document registrations in Thane.",
+    "callNow": "Call Official Desk",
+    "whatsapp": "WhatsApp Support",
+    "dailyCitizens": "Daily Citizens Served"
+  },
+  "services": {
+    "title": "Our Services",
+    "categories": {
+      "identity": "Identity Services",
+      "certificates": "Certificates",
+      "vehicle": "Vehicle Services",
+      "business": "Business Registration",
+      "payments": "Payments & Recharge",
+      "tickets": "Ticket Booking",
+      "schemes": "Government Schemes"
+    },
+    "desc": {
+      "identity": "Aadhar Card, PAN Card, Voter ID applications and updates.",
+      "certificates": "Income, Domicile, Caste, and Birth/Death certificates.",
+      "vehicle": "RTO works, Driving License, PUC and Vehicle Insurance.",
+      "business": "Udyam Aadhar, Shop Act, GST Registration & Return filing.",
+      "payments": "Utility Bills, Mobile/DTH Recharges, and Money Transfer.",
+      "tickets": "Train, Bus, and Flight ticket bookings fast and secure.",
+      "schemes": "Assistance with various state and central gov schemes."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "MRD Enterprises is a dedicated Janseva Document Service Center committed to providing fast, reliable, and authentic services. We help citizens access various government and private services with ease under one roof.",
+    "points": {
+      "msme": "MSME Registered",
+      "fast": "Fast Service",
+      "trusted": "Trusted Local Service",
+      "registered": "Citizens Registered",
+      "hubNotice": "ORGANIZATION OVERVIEW",
+      "headingPart1": "Our Legacy of",
+      "headingPart2": "Trust & Citizen Support",
+      "point1": "Government Registered",
+      "point2": "1k+ Certified Clients",
+      "point3": "Fast & Accurate Desk",
+      "point4": "Zero Technical Errors",
+      "cta": "View Official Service List"
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Us",
+    "points": {
+      "1": "One Stop Solution for all document needs",
+      "2": "Transparent and affordable pricing",
+      "3": "Expert guidance and error-free applications",
+      "4": "High focus on privacy and security of your documents",
+      "5": "Friendly customer support"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "hubNotice": "Official Contact & Support Hub",
+    "description": "Get accurate directions and professional assistance for all your citizen documentation registration needs at Thane center.",
+    "addressTitle": "Our Address",
+    "addressText": "Raigad Chawl, Azad Nagar, Opp Regency Tower, Kolshet Road, Thane - 400607",
+    "phone": "Phone",
+    "email": "Email",
+    "getDirection": "Get Direction",
+    "getYourWorkDone": "Get Your Work Done Today"
+  },
+  "ctaSection": {
+    "heading": "Complete Your Documentation Today",
+    "description": "Fast, professional, and reliable help for all your government certificates. Connect with our official desk now for zero-error processing.",
+    "callSupport": "Call Support",
+    "getYourWorkDone": "Get Your Work Done Today"
+  },
+  "testimonials": {
+    "title": "Citizen Feedback & Reviews",
+    "subtitle": "Trusted by hundreds of happy citizens in Thane for fast, accurate registration and document services.",
+    "headingPart1": "What Our",
+    "headingPart2": "Clients Say",
+    "reviews": [
+      {
+        "name": "Rohan K.",
+        "role": "Local Business Owner",
+        "text": "I got my GST and Shop Act registration done within 2 days. MRD Enterprises is truly the fastest in Thane. Highly recommended."
+      },
+      {
+        "name": "Sneha P.",
+        "role": "Citizen",
+        "text": "Very helpful staff! They helped me with my domicile and income certificate. Everything was hassle-free and affordable."
+      },
+      {
+        "name": "Vinod S.",
+        "role": "Resident",
+        "text": "Struggling with PAN card correction for months. These guys did it in a single visit. Accurate guidance and professional behavior."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find quick answers to common queries regarding government documentation and citizen services in Thane.",
+    "helpNotice": "Still have questions? Chat with our team now.",
+    "ctaText": "Get Instant Answer",
+    "items": [
+      {
+        "q": "How much time does it take for Aadhaar correction?",
+        "a": "Generally, Aadhaar updates take 7-15 working days. However, you will receive an update on your registered mobile number as soon as it's processed."
+      },
+      {
+        "q": "Which documents are required for an Income Certificate?",
+        "a": "Usually, you need your Aadhar card, Ration card, 3 years' of salary slips or IT returns, and a self-declaration. We assist with the complete checklist based on your profile."
+      },
+      {
+        "q": "Can I book train/bus tickets here?",
+        "a": "Yes, we provide fast and confirmed booking services for IRCTC Rail, Private Bus, and Flight tickets with instant receipt."
+      },
+      {
+        "q": "Is MRD Enterprises MSME registered?",
+        "a": "Yes, we are a registered MSME business and follow all government guidelines to ensure secure processing of your sensitive documents."
+      }
+    ]
+  },
+  "footer": {
+    "aboutDesc": "Official Janseva Document Service Center under MRD Enterprises. Serving the citizens of Thane with trust, speed, and 100% accuracy since 2018.",
+    "certifiedBy": "Certified By",
+    "msmeBadge": "MSME Registered",
+    "quickAccess": "Quick Access",
+    "supportHub": "Support Hub",
+    "helpdeskTitle": "Citizen Helpdesk",
+    "helpdeskNotice": "Operating hours are 09:00 AM to 09:00 PM. For emergency support after hours, please use the WhatsApp Support Desk.",
+    "viewHub": "View Hub Location",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Disclaimer",
+    "accessibility": "Accessibility India",
+    "footline": "MRD ENTERPRISES | CITIZEN SERVICE HUB THANE.",
+    "rights": "All rights reserved. MRD Enterprises"
+  }
+}
