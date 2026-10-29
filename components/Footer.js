@@ -1,12 +1,25 @@
 "use client";
 
-import { useLanguage } from "../context/LanguageContext";
-import { Phone, Mail, MapPin, Navigation, ExternalLink, HelpCircle, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "../context/LanguageContext";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Navigation,
+  HelpCircle,
+  ChevronRight,
+} from "lucide-react";
 
 export default function Footer() {
   const { t, lang } = useLanguage();
+  const [logoError, setLogoError] = useState(false);
   const currentYear = new Date().getFullYear();
+
+  const GOOGLE_MAPS_DIRECTIONS_URL =
+    "https://www.google.com/maps/dir//MRD+ENTERPRISES,+Shop+No.+32,+Raigad+Chawl,+Aazad+Nagar,+Kolshi+Road,+Thane+(W)+-+400607";
 
   const quickLinksArr = [
     { name: t.nav.home, href: "#home" },
@@ -15,120 +28,174 @@ export default function Footer() {
     { name: t.nav.contact, href: "#contact" },
   ];
 
-  const footlineText = lang === 'en' 
-    ? "MRD ENTERPRISES | CITIZEN SERVICE HUB THANE." 
-    : lang === 'hi' 
-      ? "एमआरडी एंटरप्राइजेज | नागरिक सेवा हब ठाणे।" 
-      : "एमआरडी एंटरप्रायजेस | नागरिक सेवा केंद्र ठाणे।";
+  const footlineText =
+    lang === "en"
+      ? "MRD ENTERPRISES | CITIZEN SERVICE HUB THANE"
+      : lang === "hi"
+      ? "एमआरडी एंटरप्राइजेज | नागरिक सेवा हब ठाणे"
+      : "एमआरडी एंटरप्रायजेस | नागरिक सेवा केंद्र ठाणे";
 
   return (
-    <footer className="bg-white text-black border-t-8 border-orange-500 selection:bg-orange-500 selection:text-white font-inter">
-      
-      {/* Premium Multi-Column Hub */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-8 py-16 lg:py-24">
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16">
-            
-            {/* Column 1: Massive Branding (lg:col-span-4) */}
-            <div className="lg:col-span-4 space-y-10 flex flex-col items-center lg:items-start text-center lg:text-left transition-all">
-               <div className="flex flex-col items-center lg:items-start gap-4">
-                  <div className="w-16 h-16 bg-white border-2 border-black rounded-lg p-2 flex items-center justify-center overflow-hidden transition-transform hover:rotate-6">
-                     <img 
-                       src="/logo.png" 
-                       className="w-full h-full object-contain" 
-                       alt="Service Logo" 
-                       onError={(e) => {
-                         e.target.style.display = 'none';
-                         e.target.parentElement.innerHTML = '<span class="text-black font-black text-2xl font-poppins">M</span>';
-                       }}
-                     />
-                  </div>
-                  <div className="text-3xl font-poppins font-black tracking-tighter uppercase leading-none text-black">
-                     MRD <span className="text-orange-500 uppercase">ENTERPRISES</span>
-                  </div>
-               </div>
-               <p className="text-xs font-black text-black leading-relaxed uppercase tracking-widest leading-loose font-inter max-w-sm">
-                  {t.footer.aboutDesc}
-               </p>
-               <div className="flex items-center gap-4 pt-6 border-t-4 border-black w-full justify-center lg:justify-start">
-                  <span className="text-[10px] uppercase font-black tracking-[0.2em] underline underline-offset-8 decoration-2">{t.footer.certifiedBy}</span>
-                  <div className="bg-black text-white px-5 py-2 text-[10px] font-black uppercase tracking-widest rounded shadow-xl">{t.footer.msmeBadge}</div>
-               </div>
+    <footer className="bg-white text-black border-t-4 border-orange-500 selection:bg-orange-500 selection:text-white font-sans">
+      {/* 4-Column Balanced Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+          {/* Column 1: Business Identity (lg:col-span-4) */}
+          <div className="lg:col-span-4 space-y-4 sm:space-y-5 text-left">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-sm">
+                {logoError ? (
+                  <span className="text-black font-bold text-xl font-poppins">
+                    M
+                  </span>
+                ) : (
+                  <Image
+                    src="/logo.png"
+                    alt="MRD Enterprises Logo"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                    onError={() => setLogoError(true)}
+                  />
+                )}
+              </div>
+              <div>
+                <div className="text-xl sm:text-2xl font-poppins font-bold tracking-tight uppercase leading-none text-black">
+                  MRD <span className="text-orange-500">ENTERPRISES</span>
+                </div>
+                <div className="text-xs font-sans font-semibold text-gray-700 tracking-wide mt-1">
+                  {t.footer.proprietor}
+                </div>
+              </div>
             </div>
 
-            {/* Column 2: Quick Links (lg:col-span-2) */}
-            <div className="lg:col-span-2 space-y-10 text-center lg:text-left">
-               <h4 className="text-sm font-poppins font-black uppercase tracking-[0.3em] inline-block border-b-4 border-orange-500 pb-2">
-                 {t.footer.quickAccess}
-               </h4>
-               <ul className="space-y-4">
-                  {quickLinksArr.map((link, idx) => (
-                    <li key={idx}>
-                       <Link href={link.href} className="text-xs font-black text-black hover:text-orange-500 transition-all flex items-center justify-center lg:justify-start gap-3 uppercase tracking-widest font-inter">
-                          <ChevronRight size={14} className="text-orange-500" />
-                          {link.name}
-                       </Link>
-                    </li>
-                  ))}
-               </ul>
-            </div>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-sm">
+              {t.footer.aboutDesc}
+            </p>
 
-            {/* Column 3: Contact HUB (lg:col-span-3) */}
-            <div className="lg:col-span-3 space-y-10 text-center lg:text-left">
-               <h4 className="text-sm font-poppins font-black uppercase tracking-[0.3em] inline-block border-b-4 border-orange-500 pb-2">
-                 Support Hub
-               </h4>
-               <ul className="space-y-8 font-inter">
-                  <li className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
-                     <MapPin size={22} className="text-orange-500 flex-shrink-0" />
-                     <span className="text-[11px] font-black text-black leading-relaxed uppercase tracking-widest leading-loose">{t.contact.addressText}</span>
-                  </li>
-                  <li className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
-                     <Phone size={20} className="text-orange-500 flex-shrink-0" />
-                     <a href="tel:+919082764520" className="text-xs font-black text-black hover:text-orange-500 transition-all uppercase tracking-[0.1em] border-b-2 border-black">
-                        +91 9082764520
-                     </a>
-                  </li>
-               </ul>
+            <div className="flex items-center gap-3 pt-2">
+              <span className="text-[11px] uppercase font-semibold tracking-wider text-gray-500">
+                {t.footer.certifiedBy}
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-black text-white text-[11px] font-bold uppercase tracking-wider rounded shadow-sm">
+                {t.footer.msmeBadge}
+              </span>
             </div>
+          </div>
 
-            {/* Column 4: Helpdesk Tactical (lg:col-span-3) */}
-            <div className="lg:col-span-3 space-y-10 text-center lg:text-left">
-               <h4 className="text-sm font-poppins font-black uppercase tracking-[0.3em] inline-block border-b-4 border-orange-500 pb-2">
-                 Official Info
-               </h4>
-               <div className="bg-white p-8 rounded-2xl border-4 border-black transition-all cursor-default hover:bg-orange-50 shadow-2xl shadow-black/5 w-full">
-                  <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
-                     <HelpCircle size={24} className="text-orange-500" />
-                     <span className="text-[10px] font-black uppercase tracking-widest text-black">
-                       Citizen Notice
-                     </span>
-                  </div>
-                  <p className="text-[10px] font-black text-black leading-relaxed uppercase tracking-widest leading-loose mb-6">
-                     {t.footer.helpdeskNotice}
-                  </p>
-                  <Link href="#contact" className="flex items-center justify-center lg:justify-start gap-2 text-[10px] font-black uppercase tracking-widest text-orange-500 hover:text-black transition-all underline underline-offset-8">
-                     {t.footer.viewHub}
-                     <ExternalLink size={14} />
+          {/* Column 2: Quick Links (lg:col-span-2) */}
+          <div className="lg:col-span-2 space-y-4 text-left">
+            <h3 className="text-xs sm:text-sm font-poppins font-bold uppercase tracking-wider text-black border-b-2 border-orange-500 pb-1.5 inline-block">
+              {t.footer.quickAccess}
+            </h3>
+            <ul className="space-y-2.5">
+              {quickLinksArr.map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    href={link.href}
+                    className="text-xs sm:text-sm text-gray-700 hover:text-orange-600 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded py-0.5"
+                  >
+                    <ChevronRight size={14} className="text-orange-500 flex-shrink-0" />
+                    <span>{link.name}</span>
                   </Link>
-               </div>
-            </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-         </div>
+          {/* Column 3: Contact & Operating Hours (lg:col-span-3) */}
+          <div className="lg:col-span-3 space-y-4 text-left">
+            <h3 className="text-xs sm:text-sm font-poppins font-bold uppercase tracking-wider text-black border-b-2 border-orange-500 pb-1.5 inline-block">
+              {t.footer.supportHub}
+            </h3>
+            <ul className="space-y-3.5 text-xs sm:text-sm text-gray-700">
+              {/* Address */}
+              <li className="flex items-start gap-2.5">
+                <MapPin size={17} className="text-orange-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <span className="leading-relaxed break-words">
+                  {t.contact.addressText}
+                </span>
+              </li>
+
+              {/* Telephone */}
+              <li className="flex items-center gap-2.5">
+                <Phone size={17} className="text-orange-500 flex-shrink-0" aria-hidden="true" />
+                <a
+                  href="tel:+919082764520"
+                  className="font-bold text-gray-900 hover:text-orange-600 transition-colors underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded"
+                  aria-label={`Call MRD Enterprises at ${t.footer.phoneDisplay || "090827 64520"}`}
+                >
+                  {t.footer.phoneDisplay || "090827 64520"}
+                </a>
+              </li>
+
+              {/* Operating Hours */}
+              <li className="flex items-start gap-2.5 pt-1 border-t border-gray-100">
+                <Clock size={17} className="text-orange-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <div className="space-y-0.5 leading-snug">
+                  <div className="font-semibold text-gray-900">
+                    {t.contact.hoursTitle}
+                  </div>
+                  <div className="text-gray-600">{t.contact.hoursWeekdays}</div>
+                  <div className="text-gray-600">{t.contact.hoursSunday}</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Citizen Information (lg:col-span-3) */}
+          <div className="lg:col-span-3 space-y-4 text-left">
+            <h3 className="text-xs sm:text-sm font-poppins font-bold uppercase tracking-wider text-black border-b-2 border-orange-500 pb-1.5 inline-block">
+              {t.footer.officialInfo}
+            </h3>
+
+            <div className="bg-orange-50/60 border border-orange-200 rounded-xl p-4 sm:p-5 space-y-3">
+              <div className="flex items-center gap-2">
+                <HelpCircle size={16} className="text-orange-600 flex-shrink-0" aria-hidden="true" />
+                <span className="text-xs font-poppins font-bold uppercase tracking-wider text-black">
+                  {t.footer.citizenNotice}
+                </span>
+              </div>
+              <p className="text-xs text-gray-700 leading-relaxed">
+                {t.footer.helpdeskNotice}
+              </p>
+              <div className="pt-1">
+                <a
+                  href={GOOGLE_MAPS_DIRECTIONS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-3.5 py-2 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white rounded-lg text-xs font-bold uppercase tracking-wider transition-all w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-1"
+                  aria-label={`${t.contact.getDirection} to MRD Enterprises on Google Maps`}
+                >
+                  <span>{t.contact.getDirection}</span>
+                  <Navigation size={13} aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Extreme Bottom Footline - MOBILE FIRST Responsive UI - REMOVED BLACK BG */}
-      <div className="bg-gray-50 py-16 pb-28 sm:pb-32 lg:pb-16 font-inter border-t border-gray-100">
-         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-8 flex flex-col items-center justify-between gap-12 text-center md:text-left">
-            <div className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.3em] text-black leading-loose w-full transition-all text-wrap-balance">
-               © {currentYear} {footlineText} <br className="md:hidden" /> <span className="font-black text-orange-500">{t.footer.rights}</span>
-            </div>
-            
-            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 text-[10px] font-black uppercase tracking-[0.3em] text-black border-t-2 border-black pt-10 w-full transition-all">
-               <span className="hover:text-orange-500 cursor-pointer transition-all border-b-2 border-transparent hover:border-orange-500 decoration-2">{t.footer.terms}</span>
-               <span className="hover:text-orange-500 cursor-pointer transition-all border-b-2 border-transparent hover:border-orange-500 decoration-2">{t.footer.privacy}</span>
-               <span className="hover:text-orange-500 cursor-pointer transition-all border-b-2 border-transparent hover:border-orange-500 decoration-2 font-inter">{t.footer.accessibility}</span>
-            </div>
-         </div>
+      {/* Bottom Bar */}
+      <div className="bg-gray-50 border-t border-gray-200 py-6 pb-24 sm:pb-6 font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div className="text-xs text-gray-600 leading-relaxed">
+            © {currentYear} {footlineText}.{" "}
+            <span className="font-semibold text-gray-800">{t.footer.rights}</span>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-gray-600">
+            <span className="hover:text-orange-600 cursor-pointer transition-colors">
+              {t.footer.terms}
+            </span>
+            <span className="hover:text-orange-600 cursor-pointer transition-colors">
+              {t.footer.privacy}
+            </span>
+            <span className="hover:text-orange-600 cursor-pointer transition-colors">
+              {t.footer.accessibility}
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   );

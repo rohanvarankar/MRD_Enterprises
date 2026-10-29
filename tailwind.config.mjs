@@ -18,9 +18,10 @@ export default {
         }
       },
       fontFamily: {
-        poppins: ['var(--font-poppins)', 'sans-serif'],
-        inter: ['var(--font-inter)', 'sans-serif'],
-        sans: ['var(--font-inter)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'var(--font-devanagari)', 'sans-serif'],
+        inter: ['var(--font-inter)', 'var(--font-devanagari)', 'sans-serif'],
+        sans: ['var(--font-inter)', 'var(--font-devanagari)', 'sans-serif'],
+        devanagari: ['var(--font-devanagari)', 'sans-serif'],
       }
     },
   },

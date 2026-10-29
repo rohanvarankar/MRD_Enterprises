@@ -1,9 +1,17 @@
 {
+  "header": {
+    "officialDocHub": "Official Doc Hub",
+    "citizenSupportHub": "Citizen Support Hub",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileNav": "Mobile Navigation"
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
     "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "selectLanguage": "Select Language"
   },
   "hero": {
     "title": "MRD ENTERPRISES",
@@ -16,46 +24,210 @@
     "dailyCitizens": "Daily Citizens Served"
   },
   "services": {
-    "title": "Our Services",
+    "title": "Official Documents & Service Hub",
+    "serviceAssistance": "Service Assistance",
+    "searchLabel": "Search Services",
+    "searchPlaceholder": "Search services (e.g. PAN, Domicile, GST, Ration)...",
+    "clearSearch": "Clear Search",
+    "allCategories": "All Categories",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "viewMore": "more services",
+    "showLess": "Show Less",
+    "noResultsTitle": "No Matching Services Found",
+    "noResultsDesc": "Try searching for another keyword or clear the search to view all categories.",
+    "servicesCount": "services available",
     "categories": {
-      "identity": "Identity Services",
-      "certificates": "Certificates",
-      "vehicle": "Vehicle Services",
-      "business": "Business Registration",
-      "payments": "Payments & Recharge",
-      "tickets": "Ticket Booking",
-      "schemes": "Government Schemes"
+      "pan": "PAN Card Services",
+      "ration": "Ration Card Services",
+      "certificates": "Certificates and Civil Documents",
+      "insurance": "Insurance Services",
+      "msme": "MSME and Udyam Services",
+      "gst": "GST Services",
+      "shop_act": "Shop Act Services",
+      "itr": "Income Tax Services",
+      "property_tax": "Property Tax Services",
+      "employment_education": "Employment and Education Services",
+      "legal_documents": "Legal and Document Services",
+      "gov_id_welfare": "Government ID and Welfare Cards",
+      "land_records": "Land Record Services",
+      "banking_utilities": "Banking, Bills and Utility Services",
+      "business_ip": "Business Registration and Intellectual Property",
+      "business_misc": "Business and Miscellaneous Services",
+      "welfare_schemes": "Government Schemes and Welfare Assistance"
     },
     "desc": {
-      "identity": "Aadhar Card, PAN Card, Voter ID applications and updates.",
-      "certificates": "Income, Domicile, Caste, and Birth/Death certificates.",
-      "vehicle": "RTO works, Driving License, PUC and Vehicle Insurance.",
-      "business": "Udyam Aadhar, Shop Act, GST Registration & Return filing.",
-      "payments": "Utility Bills, Mobile/DTH Recharges, and Money Transfer.",
-      "tickets": "Train, Bus, and Flight ticket bookings fast and secure.",
-      "schemes": "Assistance with various state and central gov schemes."
+      "pan": "New PAN card applications, updates, corrections, and linked Aadhaar assistance.",
+      "ration": "Assistance for new ration card issuance, member updates, and family modifications.",
+      "certificates": "Official documentation assistance for income, domicile, caste, civil registration, and government certificates.",
+      "insurance": "Premium payment assistance and policy enrolments for life, health, motor, and central security schemes.",
+      "msme": "Registration, certificate issuance, and profile update assistance for micro, small, and medium enterprises.",
+      "gst": "Professional assistance for new GST registrations and periodic return compliance.",
+      "shop_act": "Assistance for Maharashtra Shop and Establishment Gumasta registration and updates.",
+      "itr": "Comprehensive filing assistance and documentation for individual and business Income Tax Returns.",
+      "property_tax": "Online municipal property tax verification, payment assistance, and bill downloads.",
+      "employment_education": "Registration and renewal assistance for employment exchanges, NPS, and caste validity.",
+      "legal_documents": "Affidavit drafting, e-stamp papers, registered rent agreements, police verification, and document copying.",
+      "gov_id_welfare": "Assistance for Voter ID, Ayushman Bharat card, e-Shram card, and passport appointments.",
+      "land_records": "Official assistance in retrieving and verifying Maharashtra 7/12, 8A, and digital land records.",
+      "banking_utilities": "Money transfer, Aadhaar ATM, utility bill payments, electricity meter transfers, and train bookings.",
+      "business_ip": "Registration assistance for partnership deeds, trademarks, and copyright protections.",
+      "business_misc": "FSSAI food license, vehicle RC/NOC transfers, FASTag, digital signatures, photos, and lamination.",
+      "welfare_schemes": "Guidance and online application assistance for state and central government public welfare schemes."
+    },
+    "items": {
+      "pan": [
+        "New PAN card application",
+        "PAN card correction and updates"
+      ],
+      "ration": [
+        "New ration card assistance",
+        "Ration card corrections and updates"
+      ],
+      "certificates": [
+        "Income certificate",
+        "Domicile certificate (15-year residence)",
+        "Residence certificate",
+        "Age, domicile and nationality certificate",
+        "Caste certificate",
+        "Non-Creamy Layer certificate",
+        "EWS certificate",
+        "Senior citizen certificate",
+        "Birth certificate",
+        "Death certificate",
+        "Legal heir/succession certificate",
+        "Life certificate / Jeevan Pramaan",
+        "Marriage registration",
+        "Gazette/Rajpatra name, date-of-birth or religion change",
+        "Landless certificate",
+        "30% women reservation certificate/document assistance",
+        "Gap certificate"
+      ],
+      "insurance": [
+        "LIC premium payment",
+        "Health insurance assistance, including Star Health",
+        "Motor/vehicle insurance",
+        "PMJJBY enrolment assistance",
+        "PMSBY enrolment assistance"
+      ],
+      "msme": [
+        "MSME/Udyam registration assistance",
+        "Udyam certificate/download/update assistance"
+      ],
+      "gst": [
+        "GST registration assistance",
+        "GST return filing assistance"
+      ],
+      "shop_act": [
+        "Shop Act registration",
+        "Shop Act renewal/update assistance where applicable"
+      ],
+      "itr": [
+        "Income Tax Return (ITR) filing assistance"
+      ],
+      "property_tax": [
+        "Property tax payment",
+        "Online property tax assistance"
+      ],
+      "employment_education": [
+        "Job card/employment registration assistance",
+        "Employment Exchange registration and renewal",
+        "National Pension System (NPS) registration assistance",
+        "Caste validity application assistance"
+      ],
+      "legal_documents": [
+        "Stamp paper",
+        "Affidavit and e-stamp assistance",
+        "Rent agreement",
+        "Police verification",
+        "Character certificate assistance",
+        "Photocopy/Xerox"
+      ],
+      "gov_id_welfare": [
+        "Voter ID application/update assistance",
+        "Ayushman Bharat card assistance",
+        "e-Shram card assistance",
+        "Passport application and appointment assistance",
+        "Visa application/appointment assistance"
+      ],
+      "land_records": [
+        "7/12 Utara",
+        "8A Utara",
+        "Digital 7/12 record assistance"
+      ],
+      "banking_utilities": [
+        "Domestic Money Transfer (DMT)",
+        "Aadhaar ATM / AEPS assistance",
+        "Bharat Bill Payment System (BBPS)",
+        "Electricity bill payment",
+        "Water bill payment",
+        "Gas bill payment",
+        "MSEB electricity meter name transfer",
+        "Water connection name transfer",
+        "Gas connection name transfer",
+        "Property tax name transfer",
+        "Mobile recharge",
+        "DTH recharge",
+        "LPG cylinder booking",
+        "IRCTC railway ticket booking assistance"
+      ],
+      "business_ip": [
+        "Partnership firm registration assistance",
+        "Trademark registration assistance",
+        "Copyright registration assistance"
+      ],
+      "business_misc": [
+        "FSSAI registration assistance",
+        "Vehicle RC transfer",
+        "Vehicle NOC assistance",
+        "FASTag services",
+        "Digital Signature Certificate (DSC)",
+        "Travel and ticket booking",
+        "Mobile/SIM services",
+        "Passport-size photographs",
+        "Document lamination",
+        "Document attestation/apostille assistance"
+      ],
+      "welfare_schemes": [
+        "PM-KISAN assistance",
+        "Farmer ID / AgriStack assistance",
+        "Ayushman Bharat / MJPJAY assistance",
+        "Pradhan Mantri Awas Yojana (PMAY) assistance",
+        "Sanjay Gandhi Niradhar Yojana assistance",
+        "Shravanbal pension assistance",
+        "Old-age pension assistance",
+        "Widow welfare assistance",
+        "Divyang welfare assistance",
+        "PM Vishwakarma scheme assistance",
+        "PMEGP assistance",
+        "Mudra loan application assistance",
+        "Scholarship application assistance",
+        "Skill development and employment assistance"
+      ]
     }
   },
   "about": {
     "title": "About Us",
-    "description": "MRD Enterprises is a dedicated Janseva Document Service Center committed to providing fast, reliable, and authentic services. We help citizens access various government and private services with ease under one roof.",
+    "description": "MRD Enterprises is a dedicated Janseva Document Service Center in Thane committed to providing reliable, timely, and authentic citizen assistance. We help residents navigate government documentation, welfare schemes, business registrations, and utility services with ease under one roof.",
     "points": {
       "msme": "MSME Registered",
       "fast": "Fast Service",
       "trusted": "Trusted Local Service",
-      "registered": "Citizens Registered",
+      "registered": "Citizen Services",
+      "registeredSub": "Across 17 Categories",
       "hubNotice": "ORGANIZATION OVERVIEW",
       "headingPart1": "Our Legacy of",
       "headingPart2": "Trust & Citizen Support",
-      "point1": "Government Registered",
-      "point2": "1k+ Certified Clients",
-      "point3": "Fast & Accurate Desk",
-      "point4": "Zero Technical Errors",
-      "cta": "View Official Service List"
+      "point1": "MSME (Udyam) Registered",
+      "point2": "Dedicated Citizen Support",
+      "point3": "Prompt & Accurate Guidance",
+      "point4": "Careful Document Verification",
+      "cta": "Explore All Services"
     }
   },
   "whyUs": {
     "title": "Why Choose Us",
+    "badge": "Our Benefits",
     "points": {
       "1": "One Stop Solution for all document needs",
       "2": "Transparent and affordable pricing",
@@ -69,9 +241,15 @@
     "hubNotice": "Official Contact & Support Hub",
     "description": "Get accurate directions and professional assistance for all your citizen documentation registration needs at Thane center.",
     "addressTitle": "Our Address",
-    "addressText": "Raigad Chawl, Azad Nagar, Opp Regency Tower, Kolshet Road, Thane - 400607",
+    "addressText": "Shop No. 32, Raigad Chawl, Aazad Nagar, Kolshi Road, Thane (W) – 400607",
     "phone": "Phone",
+    "phoneDisplay": "090827 64520",
     "email": "Email",
+    "hoursTitle": "Operating Hours",
+    "hoursWeekdays": "Mon – Sat: 9:00 AM – 5:00 PM",
+    "hoursSunday": "Sun: 9:00 AM – 10:30 PM",
+    "proprietor": "Proprietor: Mangesh R. Dudhgavkar",
+    "mapTitle": "MRD Enterprises Location Map",
     "getDirection": "Get Direction",
     "getYourWorkDone": "Get Your Work Done Today"
   },
@@ -79,30 +257,20 @@
     "heading": "Complete Your Documentation Today",
     "description": "Fast, professional, and reliable help for all your government certificates. Connect with our official desk now for zero-error processing.",
     "callSupport": "Call Support",
+    "whatsapp": "WhatsApp Support",
     "getYourWorkDone": "Get Your Work Done Today"
   },
   "testimonials": {
-    "title": "Citizen Feedback & Reviews",
-    "subtitle": "Trusted by hundreds of happy citizens in Thane for fast, accurate registration and document services.",
-    "headingPart1": "What Our",
-    "headingPart2": "Clients Say",
-    "reviews": [
-      {
-        "name": "Rohan K.",
-        "role": "Local Business Owner",
-        "text": "I got my GST and Shop Act registration done within 2 days. MRD Enterprises is truly the fastest in Thane. Highly recommended."
-      },
-      {
-        "name": "Sneha P.",
-        "role": "Citizen",
-        "text": "Very helpful staff! They helped me with my domicile and income certificate. Everything was hassle-free and affordable."
-      },
-      {
-        "name": "Vinod S.",
-        "role": "Resident",
-        "text": "Struggling with PAN card correction for months. These guys did it in a single visit. Accurate guidance and professional behavior."
-      }
-    ]
+    "title": "Citizen Trust & Google Reviews",
+    "subtitle": "Authentic citizen feedback from our Google Business Profile for documentation services in Thane.",
+    "badge": "Google Business Profile",
+    "ratingScore": "5.0",
+    "ratingMax": "/ 5.0",
+    "reviewCount": "13 Google Reviews",
+    "ratingNote": "Selected static reviews recorded from the official Google Business Profile. Not live synchronized.",
+    "viewOnGoogle": "View Reviews on Google",
+    "staticBadge": "Static Record",
+    "ownerResponseLabel": "Response from owner"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -129,13 +297,17 @@
     ]
   },
   "footer": {
-    "aboutDesc": "Official Janseva Document Service Center under MRD Enterprises. Serving the citizens of Thane with trust, speed, and 100% accuracy since 2018.",
+    "aboutDesc": "Official Janseva Document Service Center under MRD Enterprises. Providing citizen registration and government documentation assistance in Thane.",
+    "proprietor": "Proprietor: Mangesh R. Dudhgavkar",
     "certifiedBy": "Certified By",
     "msmeBadge": "MSME Registered",
     "quickAccess": "Quick Access",
     "supportHub": "Support Hub",
+    "phoneDisplay": "090827 64520",
+    "officialInfo": "Official Info",
+    "citizenNotice": "Citizen Notice",
     "helpdeskTitle": "Citizen Helpdesk",
-    "helpdeskNotice": "Operating hours are 09:00 AM to 09:00 PM. For emergency support after hours, please use the WhatsApp Support Desk.",
+    "helpdeskNotice": "Official citizen assistance desk for document registration and certificate services in Thane. Visit our center during working hours or call our desk for guidance.",
     "viewHub": "View Hub Location",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Disclaimer",

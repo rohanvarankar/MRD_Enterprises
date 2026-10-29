@@ -15,12 +15,18 @@ export const LanguageProvider = ({ children }) => {
     const savedLang = localStorage.getItem("app_lang");
     if (savedLang && translations[savedLang]) {
       setLang(savedLang);
+      if (typeof document !== "undefined") {
+        document.documentElement.lang = savedLang;
+      }
     }
   }, []);
 
   const changeLanguage = (newLang) => {
     setLang(newLang);
     localStorage.setItem("app_lang", newLang);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = newLang;
+    }
   };
 
   // On the server, t will always provide translations.en as default 
