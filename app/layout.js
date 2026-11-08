@@ -4,8 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { LanguageProvider } from "../context/LanguageContext";
 
-const inter = Inter({ 
-  subsets: ["latin"], 
+const inter = Inter({
+  subsets: ["latin"],
   variable: "--font-inter",
   display: 'swap',
 });
@@ -76,11 +76,11 @@ export default function RootLayout({ children }) {
     "@id": "https://mrdenterprises.in",
     "url": "https://mrdenterprises.in",
     "telephone": "+919082764520",
-    "email": "mangesh10j@gmail.com",
+    "email": "mrdenterprises.thane@gmail.com",
     "priceRange": "₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Shop No. 32, Raigad Chawl, Aazad Nagar, Kolshi Road",
+      "streetAddress": "Raigad Chawl, Kolshet Road, Opp. Regency Tower, Azad Nagar, Thane (W), Maharashtra 400607",
       "addressLocality": "Thane (West)",
       "postalCode": "400607",
       "addressRegion": "Maharashtra",

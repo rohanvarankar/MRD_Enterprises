@@ -241,7 +241,7 @@
     "hubNotice": "Official Contact & Support Hub",
     "description": "Get accurate directions and professional assistance for all your citizen documentation registration needs at Thane center.",
     "addressTitle": "Our Address",
-    "addressText": "Shop No. 32, Raigad Chawl, Aazad Nagar, Kolshi Road, Thane (W) – 400607",
+    "addressText": "Raigad Chawl, Kolshet Road, Opp. Regency Tower, Azad Nagar, Thane (W) – 400607, Maharashtra.",
     "phone": "Phone",
     "phoneDisplay": "090827 64520",
     "email": "Email",
@@ -251,7 +251,19 @@
     "proprietor": "Proprietor: Mangesh R. Dudhgavkar",
     "mapTitle": "MRD Enterprises Location Map",
     "getDirection": "Get Direction",
-    "getYourWorkDone": "Get Your Work Done Today"
+    "getYourWorkDone": "Get Your Work Done Today",
+    "visitFacebook": "Visit us on Facebook",
+    "founder": {
+      "heading": "Meet the Founder",
+      "name": "Mr. Mangesh R. Dudhgavkar",
+      "designation": "Founder & Proprietor | MRD Enterprises",
+      "para1": "For me, public service is not merely about processing documents; it is a responsibility to provide every citizen with proper guidance and reliable services.",
+      "para2": "Through MRD Enterprises, I strive to provide transparent, convenient, and professional services for various government documents and online services.",
+      "para3": "Along with running the business, my goal is to uphold social responsibility and earn the trust of every customer.",
+      "quote": "\"Commitment to Public Service, Identity of Trust!\"",
+      "tagline": "Your Trust • Our Service",
+      "imageAlt": "Mr. Mangesh R. Dudhgavkar - Founder & Proprietor | MRD Enterprises"
+    }
   },
   "ctaSection": {
     "heading": "Complete Your Documentation Today",
@@ -313,6 +325,14 @@
     "privacy": "Privacy Disclaimer",
     "accessibility": "Accessibility India",
     "footline": "MRD ENTERPRISES | CITIZEN SERVICE HUB THANE.",
-    "rights": "All rights reserved. MRD Enterprises"
+    "rights": "All rights reserved. MRD Enterprises",
+    "developer": {
+      "attribution": "Designed & Developed by",
+      "name": "Rohan Varankar",
+      "role": "Software Engineer",
+      "message": "Want to build a professional website for your business? Let's connect!",
+      "cta": "Contact for Website Development",
+      "directEmailLabel": "Or email me directly:"
+    }
   }
 }

@@ -11,6 +11,7 @@ import {
   Navigation,
   HelpCircle,
   ChevronRight,
+  Mail,
 } from "lucide-react";
 
 export default function Footer() {
@@ -18,8 +19,12 @@ export default function Footer() {
   const [logoError, setLogoError] = useState(false);
   const currentYear = new Date().getFullYear();
 
+  const dev = t.footer?.developer || {};
+  const DEV_EMAIL_HREF =
+    "mailto:rohan.manuware@gmail.com?subject=Website%20Development%20Inquiry";
+
   const GOOGLE_MAPS_DIRECTIONS_URL =
-    "https://www.google.com/maps/dir//MRD+ENTERPRISES,+Shop+No.+32,+Raigad+Chawl,+Aazad+Nagar,+Kolshi+Road,+Thane+(W)+-+400607";
+    "https://www.google.com/maps/dir//MRD+ENTERPRISES,+Raigad+Chawl,+Kolshet+Road,+Opp.+Regency+Tower,+Azad+Nagar,+Thane+West,+Maharashtra+400607";
 
   const quickLinksArr = [
     { name: t.nav.home, href: "#home" },
@@ -177,7 +182,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-50 border-t border-gray-200 py-6 pb-24 sm:pb-6 font-sans">
+      <div className="bg-gray-50 border-t border-gray-200 py-5 sm:py-6 font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <div className="text-xs text-gray-600 leading-relaxed">
             © {currentYear} {footlineText}.{" "}
@@ -194,6 +199,58 @@ export default function Footer() {
             <span className="hover:text-orange-600 cursor-pointer transition-colors">
               {t.footer.accessibility}
             </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Developer Attribution & Contact CTA */}
+      <div className="relative z-10 bg-gray-100/90 border-t border-gray-200 py-6 sm:py-7 pb-28 sm:pb-8 font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
+            {/* Developer Details */}
+            <div className="space-y-1">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 sm:gap-2 text-xs text-gray-600">
+                <span className="font-normal">{dev.attribution || "Designed & Developed by"}</span>
+                <span className="font-bold text-black font-poppins text-xs sm:text-sm">
+                  {dev.name || "Rohan Varankar"}
+                </span>
+                <span className="text-gray-400" aria-hidden="true">•</span>
+                <span className="text-orange-600 font-semibold text-[11px] sm:text-xs uppercase tracking-wider">
+                  {dev.role || "Software Engineer"}
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-700 font-medium max-w-xl">
+                {dev.message}
+              </p>
+            </div>
+
+            {/* Email CTA Button & Direct Email */}
+            <div className="flex-shrink-0 w-full sm:w-auto flex flex-col items-center md:items-end justify-center relative z-20 gap-1.5">
+              <a
+                id="developer-contact-cta"
+                href={DEV_EMAIL_HREF}
+                className="group inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 bg-white hover:bg-orange-500 border border-gray-300 hover:border-orange-500 text-gray-900 hover:text-white rounded-lg text-xs sm:text-sm font-bold tracking-wide shadow-sm hover:shadow transition-all duration-200 min-h-[44px] w-full sm:w-auto cursor-pointer pointer-events-auto relative z-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
+                aria-label={`${dev.cta || "Contact for Website Development"} - rohan.manuware@gmail.com`}
+                title="Contact Rohan Varankar for Website Development (rohan.manuware@gmail.com)"
+              >
+                <Mail size={16} className="text-orange-500 group-hover:text-white transition-colors flex-shrink-0 pointer-events-none" aria-hidden="true" />
+                <span className="pointer-events-none">{dev.cta || "Contact for Website Development"}</span>
+              </a>
+
+              {/* Direct Email Supporting Label & Link */}
+              <div className="flex flex-col items-center md:items-end text-center md:text-right pt-0.5">
+                <span className="text-[11px] sm:text-xs text-gray-500 font-normal">
+                  {dev.directEmailLabel || "Or email me directly:"}
+                </span>
+                <a
+                  href="mailto:rohan.manuware@gmail.com"
+                  className="text-xs sm:text-sm font-semibold text-blue-600 hover:text-blue-700 hover:underline select-text cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded px-1 py-0.5 transition-colors tracking-tight"
+                  aria-label="Direct email: rohan.manuware@gmail.com"
+                >
+                  rohan.manuware@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
